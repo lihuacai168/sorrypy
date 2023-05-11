@@ -2,7 +2,13 @@
 version: '3'
 services:
   web:
-    build: .
+    image: sorry:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        DEBIAN_REPO: ${DEBIAN_REPO:-mirrors.aliyun.com}
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://pypi.tuna.tsinghua.edu.cn/simple}
     ports:
-     - "5997:5997"
+     - "15000:15000"
             
