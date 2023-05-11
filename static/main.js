@@ -76,11 +76,18 @@ function save_input() {
 }
 
 function sidebar_open() {
-    sidebar.style.display = "block";
+    document.getElementById('sidebar').style.display = "block";
+    document.getElementById('main_frame').style.marginLeft = "200px";  // 假设侧边栏的宽度是200px
+    document.getElementById('input_text').style.marginLeft = "200px";  // 假设侧边栏的宽度是200px
+    document.getElementById('footer').style.marginLeft = "200px";  // 假设侧边栏的宽度是200px
 }
 function sidebar_close() {
-    sidebar.style.display = "none";
+    document.getElementById('sidebar').style.display = "none";
+    document.getElementById('main_frame').style.marginLeft = "0";
+    document.getElementById('input_text').style.marginLeft = "0";
+    document.getElementById('footer').style.marginLeft = "0";
 }
+
 
 submit_btn.onclick        = submit;
 show_sidebar_btn.onclick  = sidebar_open;
